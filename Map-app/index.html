@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NY Map - Jonathan Blanco</title>
+
+	<style type="text/css">
+		#map,body,html,nav{height:100%}nav,svg{position:absolute}body,html{margin:0;padding:0;overflow:hidden}h3{font-size:1.05em;font-family:cursive,sans-serif;color:#778899;text-align:center;margin-top:6px;margin-bottom:0}nav{width:301px;background-color:#add8e6;z-index:1}hr{width:93%;border-style:groove}section{padding-left:11px;line-height:24px}#menu-middle{font-weight:900}#display-search-results{overflow-y:auto;height:55.5%}#display-search-results-list{list-style:none;margin:0;padding:0}svg{width:31px;z-index:2;right:0}
+	</style>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" height="31px" width="31px" viewBox="0 0 24 24" data-bind="click: toggleMenu">
+    <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+  </svg>
+	<nav data-bind="visible: menu">
+		<h3>Get familiarized with the MAIN attractions of Manhattan NY and its surroundings such as restaurants, hotels, subway stations, etc.</h3><hr>
+
+		<section id="menu-middle">
+			<span>Filter </span>
+			<input id="filter-box" type="text" placeholder="Filter by attraction" size="35" data-bind='value: filterValue, valueUpdate: "keyup"'>
+		</section>
+		<hr>
+		<section id="display-search-results">
+			<ul id="display-search-results-list" data-bind="foreach: searchedPlaces">
+				<li data-bind="click: showInfoWindow">
+					<strong data-bind="text: title"></strong><br>
+				</li>
+			</ul>
+		</section>
+	</nav>
+
+	<div id="map"></div><!--Data provided by Wikipedia-->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!--Knockout-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+	<!-- My files -->
+	<script src="js/app.js"></script>
+	<!-- Google API -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyA9N4xFQoRhPvxTpsbv-OGVIU7MLpHaYLI&v=3&callback=initMap" onerror="googleError()"></script>
+</body>
+</html>
