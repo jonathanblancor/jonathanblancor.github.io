@@ -177,13 +177,13 @@ work.display = function() {
 work.display();
 
 //Internationalizing my name. Ex: Jonathan Blanco to Jonathan BLANCO
-// $("#main").append(internationalizeButton);
-// function inName() {
-// 	var nameArray = bio.name.split(" ");
-// 	nameArray[1] = nameArray[1].toUpperCase();
+$("#main").append(internationalizeButton);
+function inName() {
+	var nameArray = bio.name.split(" ");
+	nameArray[1] = nameArray[1].toUpperCase();
 
-// 	return nameArray[0] + " " + nameArray[1];
-// }
+	return nameArray[0] + " " + nameArray[1];
+}
 
 //Shows my projects
 projects.display = function() {
