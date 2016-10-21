@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Book Antiqua', 'Palatino Linotype', Palatino, serif;
 }
 
 .clear-fix {
@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-style: italic;
-  font-size: 20px;
+  font-size: 22px;
   color: #000;
   line-height: 22px;
 }
@@ -68,7 +68,7 @@ h5 {
 
 .date-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   line-height: 16px;
   float: left;
@@ -76,7 +76,7 @@ h5 {
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   line-height: 16px;
   float: right;
@@ -84,7 +84,7 @@ h5 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 17px;
   color: #333;
   line-height: 21px;
 }
@@ -98,7 +98,7 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 21px;
   color: #f3f3f3;
   line-height: 28px;
 }
