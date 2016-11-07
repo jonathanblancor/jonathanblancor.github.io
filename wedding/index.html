@@ -18,23 +18,35 @@
 				width: 900px;
 				margin: 0 auto;
 				background-image: url("images/background.jpg");
+				background-size: cover;
 			}
 
-			header div {
-				font-family: 'Brush Script MT', cursive;
-				font-size: 36px;
+			header #top {
+				font-family: Papyrus, cursive;
+				font-size: 80px;
 				text-align: center;
-				text-decoration: underline;
+				text-shadow: 4px 15px 5px black;
+		    color: white;
+		    font-weight: 900;
+		    padding-top: 15px;
+			}
+
+			header #middle {
+				/*font-family: 'Brush Script MT', cursive;*/
+		    font-size: 36px;
+		    text-align: center;
+		    color: white;
 			}
 		</style>
 	</head>
 	<body>
 	<header>
-			<canvas id="c" height="130" width="900"></canvas>
+			<!-- <canvas id="c" height="130" width="900"></canvas> -->
+			<div id="top">Jonathan & Lisvet</div><br>
 
-			<div>Are Getting Married</div>
+			<div id="middle">March 13th 2017</div>
 		</header>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			var c = document.querySelector("#c");
 			var ctx = c.getContext("2d");
 
@@ -48,6 +60,6 @@
 			ctx.lineWidth = 3;
 			ctx.strokeText("Jonathan & Lisvet", 120, 85);
 
-		</script>
+		</script> -->
 	</body>
 </html>
