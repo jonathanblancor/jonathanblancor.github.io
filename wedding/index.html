@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title></title>
+
+		<style>
+			* {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+
+			body {
+				width: 900px;
+				margin: 0 auto;
+				background-image: url("images/background.jpg");
+			}
+
+			header div {
+				font-family: 'Brush Script MT', cursive;
+				font-size: 36px;
+				text-align: center;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+	<header>
+			<canvas id="c" height="130" width="900"></canvas>
+
+			<div>Are Getting Married</div>
+		</header>
+		<script type="text/javascript">
+			var c = document.querySelector("#c");
+			var ctx = c.getContext("2d");
+
+			ctx.font = "80px Papyrus, fantasy";
+
+			ctx.fillStyle = "#FFD400";
+			ctx.fill();
+			ctx.fillText("Jonathan & Lisvet", 125, 90);
+
+			ctx.strokeStyle = "#000000";
+			ctx.lineWidth = 3;
+			ctx.strokeText("Jonathan & Lisvet", 120, 85);
+
+		</script>
+	</body>
+</html>
