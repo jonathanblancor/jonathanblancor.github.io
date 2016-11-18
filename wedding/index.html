@@ -36,6 +36,28 @@
 		    font-size: 36px;
 		    text-align: center;
 		    color: white;
+		    width: 50%;
+		    float: left;
+			}
+
+			header #days {
+				float: right;
+				padding-right: 5px;
+        padding-bottom: 6px;
+			}
+
+      header #clock {
+				float: left;
+        padding-right: 9px;
+        padding-left: 5px;
+			}
+
+			header .time {
+			  float: left;
+		    font-size: 36px;
+		    background-color: blanchedalmond;
+		    color: brown;
+		    border-radius: 8px;
 			}
 		</style>
 	</head>
@@ -43,7 +65,50 @@
 		<header>
 			<div id="top">Jonathan & Lisvet</div><br>
 			<div id="middle">March 13th 2017</div>
+			<div class="time">
+				<div id="clock"></div>
+				<div id="days">days to the big day!</div>
+			</div>
 		</header>
 
+		<script>
+			var weddingDay = '2017-03-13'; // end date
+			var weddingDayMs = Date.parse(weddingDay); // time in milliseconds
+			var clockId = document.getElementById('clock');
+
+			//Get time remaining from today to a future day
+			function getRemainingTime(endTime) {
+				var remainingTime = endTime - Date.now(); //Time in ms
+
+				//Get days															 ms    sec  min  hr
+				var days = Math.floor( remainingTime / (1000 * 60 * 60 * 24) );
+
+				 return {
+				 	'total' : remainingTime,
+				 	'days' : days
+				 }
+			}
+
+			//Start the clock and display the time in the given HTML element
+			function runClock(element, endTime) {
+
+				function updateClock() {
+					var timeObject = getRemainingTime(endTime);
+
+					element.innerHTML = timeObject.days;
+
+					if (timeObject.total <= 0)
+					{
+						clearInterval(timeInterval);
+					}
+				}
+
+				updateClock();
+				var timeInterval = setInterval(updateClock, 1000);
+			}
+
+			runClock(clockId, weddingDayMs);
+
+		</script>
 	</body>
 </html>
