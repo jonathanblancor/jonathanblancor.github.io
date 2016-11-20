@@ -33,17 +33,18 @@
 
 			header #middle {
 				/*font-family: 'Brush Script MT', cursive;*/
-		    font-size: 36px;
+		    font-size: 25px;
 		    text-align: center;
 		    color: white;
 		    width: 50%;
 		    float: left;
+		    margin-right: 85px;
 			}
 
 			header #days {
 				float: right;
 				padding-right: 5px;
-        padding-bottom: 6px;
+        padding-bottom: 3px;
 			}
 
       header #clock {
@@ -54,23 +55,91 @@
 
 			header .time {
 			  float: left;
-		    font-size: 36px;
+		    font-size: 25px;
 		    background-color: blanchedalmond;
 		    color: brown;
 		    border-radius: 8px;
+			}
+
+			section #slideshow {
+				width: 700px;
+			  margin: auto;
+			  height: 455px;
+			}
+
+			section #slideshow div {
+				width: 100%;
+				display: none;
+			}
+
+			section #slideshow img {
+				width: 100%;
+				height: 455px;
+				box-shadow: -1px 5px 40px black;
+			}
+
+			@media screen and (max-width: 550px) {
+				body {
+					background-size: 470px 600px;
+					width: 100%;
+				}
+
+				header #top {
+					font-size: 30px;
+					text-align: left;
+					margin-left: 30px;
+					margin-bottom: 10px;
+				}
+
+				header #middle {
+					font-size: 15px;
+					width: 29%;
+					margin-right: 0;
+					margin-left: 11px;
+				}
+
+				header .time {
+					font-size: 15px;
+					margin-left: 15px;
+				}
+
+				section #slideshow {
+					width: 80%;
+					margin: 0;
+				}
+				section #slideshow img {
+					height: 410px;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<header>
-			<div id="top">Jonathan & Lisvet</div><br>
+			<div id="top">Jonathan & Lisvet</div>
 			<div id="middle">March 13th 2017</div>
 			<div class="time">
 				<div id="clock"></div>
 				<div id="days">days to the big day!</div>
 			</div>
-		</header>
+		</header><br><br>
+		<section>
+			<div id="slideshow">
+				<div class="slide">
+					<img src="images/DSC_0672.jpg">
+				</div>
+				<div class="slide">
+					<img src="images/DSC_0672.jpg">
+				</div>
+				<div class="slide">
+					<img src="images/DSC_0672.jpg">
+				</div>
+				<div class="slide">
+					<img src="images/DSC_0672.jpg">
+				</div>
+			</div>
+		</section>
 
+		<!-- CLOCK CODE -->
 		<script>
 			var weddingDay = 'March 13 2017 17:00:00 GMT-0500'; // end date
 			var weddingDayMs = Date.parse(weddingDay); // time in milliseconds
@@ -108,7 +177,35 @@
 			}
 
 			runClock(clockId, weddingDayMs);
+		</script>
+		<!-- jQuery -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<!-- SLIDESHOW CODE -->
+		<script>
+			var index = 0,
+					items = $('#slideshow div'),
+					itemAmount = items.length;
 
+			function displayImage() {
+				var item = items.eq(index);//$('#slideshow div')
+
+				items.hide();
+
+				item.css('display', 'inline-block');
+			}
+
+			setInterval(function() {
+				index += 1;
+
+				if (index > itemAmount - 1)
+				{
+					index = 0;
+				}
+
+				displayImage();
+			}, 3000);
+
+			displayImage();
 		</script>
 	</body>
 </html>
