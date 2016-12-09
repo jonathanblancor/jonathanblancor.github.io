@@ -12,6 +12,7 @@ html {
 body {
 	width: 720px;
 	margin: 0 auto;
+	position: fixed;
 	background-image: url("../images/background.jpg");
 	/*background-size: cover;*/
 	background-size: 100% 100%;
