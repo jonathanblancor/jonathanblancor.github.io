@@ -1,0 +1,25 @@
+<form id="f">
+	<fieldset>
+		<legend>First Name</legend>
+		<input type="text" name="">
+	</fieldset>
+	<fieldset>
+		<legend>Last Name</legend>
+		<input type="text" name="" >
+	</fieldset>
+	<label for="firstname">Party Size (including you)</label>
+				<input type="number" name="fname" id="firstname" placeholder="How many coming?">
+
+				<label for="lastname">Last Name</label>
+				<input type="tel" name="lname" id="lastname" autofocus>
+
+				<input type="submit" name="Submit">
+</form>
+<div id="l"></div>
+
+<script type="text/javascript">
+	document.getElementById('f').onsubmit = function() {
+		document.getElementById("l").innerHTML = "submitted!";
+
+	}
+</script>
