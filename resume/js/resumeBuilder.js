@@ -39,6 +39,13 @@ var education = {
 
 var work = {
 	"jobs" : [{
+			"employer" : "Biorasi",
+			"title" : "Front-end Developer with Back-end development experience",
+			"location" : "Miami, FL",
+			"dates": "May 2017-Present",
+			"description" : "• Design user interface of the company proprietary platform, TALOS, using AngularJS. <br>• Program back-end for login (token-based authentication), security, and CRUD operations in C#. <br>•	Participate in test driven development to ensure quality of the platform. <br>• Examine and develop user acceptance tests ensuring the best user experience is delivered. <br>•	Improve and expand on a secure RESTful API that services a complex clinical trials application. <br>• Develop and maintain clean and organized documentation."
+		}
+		,{
 			"employer" : "FIU",
 			"title" : "Teaching Assitant",
 			"location" : "Miami, FL",
