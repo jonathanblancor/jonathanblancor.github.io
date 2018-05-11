@@ -12,10 +12,10 @@ angular.module('usersApp', [])
 		alert("Error loading file: " + error.data);
 	});
   	
-	$scope.delete = function(index) {
-		if (index != -1) {
-			$scope.users.splice(index, 1);
-		}
+	$scope.delete = function(user) {
+		var index = $scope.user.findIndex(function(obj) {return obj.id == user.id});
+		
+		$scope.users.splice(index, 1);
 	}
 	
 });
