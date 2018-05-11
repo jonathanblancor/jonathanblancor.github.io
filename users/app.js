@@ -6,7 +6,7 @@ angular.module('usersApp', [])
   $scope.sortReverse = false;
   $scope.searchUser = '';
 	
-	$http.get("user.json", function(response){
+	$http.get("data/user.json", function(response){
 		 $scope.users = response.data;
 	}, function(error) {
 		alert("Error loading file: " + error.data);
