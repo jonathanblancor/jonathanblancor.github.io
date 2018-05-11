@@ -13,7 +13,7 @@ angular.module('usersApp', [])
 	});
   	
 	$scope.delete = function(user) {
-		var index = $scope.user.findIndex(function(obj) {return obj.id == user.id});
+		var index = $scope.users.findIndex(function(obj) {return obj.id == user.id});
 		
 		$scope.users.splice(index, 1);
 	}
