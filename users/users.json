@@ -1,0 +1,70 @@
+[{
+   "id": 1, 
+   "first_name": "John", 
+   "last_name": "Johnson", 
+   "email": "jjon@yahoo.com", 
+   "gender": "Male" 
+ },
+ {
+   "id": 2, 
+   "first_name": "Robert", 
+   "last_name": "Robertson", 
+   "email": "rrob@yahoo.com", 
+   "gender": "Male" 
+ },
+ {
+   "id": 3, 
+   "first_name": "Jack", 
+   "last_name": "Jackson", 
+   "email": "jjack@google.com", 
+   "gender": "Male" 
+ },
+ {
+   "id": 4, 
+   "first_name": "James", 
+   "last_name": "Jameson", 
+   "email": "jjame@google.com", 
+   "gender": "Male" 
+ },
+ {
+   "id": 5, 
+   "first_name": "Gib", 
+   "last_name": "Gibson", 
+   "email": "ggib@hotmail.com", 
+   "gender": "Male" 
+ },
+ {
+   "id": 6, 
+   "first_name": "Michelle", 
+   "last_name": "Burnet", 
+   "email": "mbur@hotmail.com", 
+   "gender": "Female" 
+ },
+ {
+   "id": 7, 
+   "first_name": "Paddy", 
+   "last_name": "Smith", 
+   "email": "psmi@aol.com", 
+   "gender": "Female" 
+ },
+ {
+   "id": 8, 
+   "first_name": "Nicole", 
+   "last_name": "Ivanovic", 
+   "email": "niva@yahoo.com", 
+   "gender": "Female" 
+ },
+ {
+   "id": 9, 
+   "first_name": "Larissa", 
+   "last_name": "Russo", 
+   "email": "lruss@google.com", 
+   "gender": "Female" 
+ },
+ {
+   "id": 10, 
+   "first_name": "Emely", 
+   "last_name": "Lowe", 
+   "email": "elowe@live.com", 
+   "gender": "Female" 
+ }]
